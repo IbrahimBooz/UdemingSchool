@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('/images/bg.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-left {
+    display: flex;
+}
+
+.header-left img {
+    width: 120px;
+    height: 60px;
+    object-fit: cover;
+
+}
+
+.header-right ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.header-right ul li a {
+    font-size: 22px;
+    color: white;
+}
+
+.header-right ul li {
+    position: relative;
+}
+
+.header-right ul li::before {
+    content: '';
+    height: 4px;
+    width: 0;
+    position: absolute;
+    margin-top: 24px;
+    background-color: red;
+}
+
+.header-right ul li:hover::before {
+    width: 100%;
+    transition: ease-in-out .4s;
+}
+
+.hamburger-menu {
+    font-size: 44px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+}
+
+.contents h1 {
+    color: white;
+    opacity: 0.9;
+    font-size: 82px;
+    text-align: center;
+}
+
+.contents p {
+    width: 90%;
+    opacity: 0.6;
+    margin: 0 auto;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.contents a {
+    display: flex;
+    justify-content: center;
+    width: 13%;
+    height: 45px;
+    text-align: center;
+    align-items: center;
+    border: 3px solid white;
+    background-color: transparent;
+    margin: auto;
+    color: white;
+    opacity: 0.6;
+}
+
+.contents a:hover {
+    border-radius: 10px;
+    border-color: bisque;
+    transform: scale(0.9);
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.courses-all {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+.courses h1 {
+    text-align: center;
+    font-size: 38px;
+    width: 80%;
+    margin: auto;
+}
+
+.courses p {
+    font-size: 18px;
+    width: 80%;
+    margin: auto;
+    color: gray;
+}
+
+.courses .courses-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    width: 50%;
+    height: 80%;
+    padding-bottom: 40px;
+    border-radius: 5px;
+    background-color: rgb(233, 229, 222);
+    box-shadow: -10px -15px black;
+
+}
+
+.courses .courses-card:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 15px black;
+
+}
+
+.courses .courses-card h1 {
+    font-weight: 600;
+}
+
+.courses .courses-card p {
+    text-align: center;
+    line-height: 26px;
+}
+
+.city-all {
+    width: 80%;
+    margin: 40px auto;
+}
+
+
+.city-up h1 {
+    font-size: 42px;
+    text-align: center;
+}
+
+.city-up p {
+    color: gray;
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+}
+
+.city-down {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+
+}
+
+.city-down-card {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.city-down-card img {
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: block;
+}
+
+.city-down-card .layer {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    text-align: center;
+}
+
+.city-down-card .layer h3 {
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    position: absolute;
+    bottom: 0;
+    transition: .3s;
+    opacity: 0;
+}
+
+.city-down-card .layer:hover {
+    background-color: rgba(196, 146, 54, 0.7);
+    transition: .3s;
+
+}
+
+.city-down-card .layer:hover h3 {
+    bottom: 50%;
+    opacity: 1;
+}
+
+.library-all {
+    display: flex;
+
+    gap: 40px;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.library-card {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.library-card img {
+    width: 100%;
+    height: 66%;
+    border-radius: 10px;
+}
+
+.comment-all {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    gap: 40px;
+}
+
+.comment-all .comment-up h1 {
+    font-size: 42px;
+    text-align: center;
+}
+
+.comment-all .comment-up p {
+    width: 90%;
+
+    margin: 10px auto 0;
+}
+
+.comment-down {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+    width: 100%;
+}
+
+.comment-down-card {
+    width: 33%;
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(233, 229, 222);
+    height: 100%;
+}
+
+.comment-down-card img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+}
+
+.comment-down-card-content h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.comment-down-card-content p {
+    width: 100%;
+
+}
+
+.urgent-call {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('/images/london.jpeg');
+
+    width: 50%;
+    height: 600px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 30px auto;
+
+
+}
+
+.urgent-call h1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    color: white;
+    font-size: 24px;
+}
+
+.urgent-call a {
+    position: absolute;
+    top: 58%;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    left: 40%;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.footer {
+    width: 80%;
+    margin: auto;
+}
+.footer h1 {
+    text-align: center;
+    font-size: 36px;
+}
+.footer p {
+    font-weight: 500;
+    color: gray;
+    font-size: 18px;
+
+}
+
+.footer .icons {
+    display: flex;
+    color: red;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    gap: 30px;
+}
+.footer p {
+    margin: 20px 0;
+    text-align: justify;
+
+}
+.footer #ibo{
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1203px) {
+
+    .header-right {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .contents {
+        width: 100%;
+        margin: auto;
+    }
+
+    .contents h1 {
+        font-size: 36px;
+    }
+
+    .contents p {
+        text-align: justify;
+    }
+
+    .contents a {
+        width: 30%;
+    }
+
+    .courses-all {
+        width: 90%;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .courses .courses-card {
+        width: 70%;
+        height: 100%;
+
+        margin: auto;
+    }
+
+    .city-all .city-down {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    .city-all .city-down img {
+        width: 290%;
+        height: 400px;
+    }
+
+
+    .library-all {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .library-card {
+        width: 90%;
+        margin: auto;
+    }
+
+    .comment-all {
+        flex-direction: column;
+    }
+
+    .comment-down {
+        flex-direction: column;
+    }
+
+    .comment-all .comment-down-card {
+
+        width: 80%;
+        margin: auto;
+        padding: 30px;
+
+    }
+    .urgent-call {
+        width: 80%;
+    }
+    .urgent-call h1 {
+        top: 54%;
+        left: 18%;
+    }
+    .urgent-call a {
+        top: 62%;
+        left: 35%;
+
+    }
+    .footer {
+        width: 80%;
+    }
+    .footer p {
+        width: 100%;
+        text-align: justify;
+    }
+
+
+
+}
+@media screen and (max-width:767px) {
+
+    .contents p {
+        width: 100%;
+    }
+
+    .contents a {
+        width: 55%;
+    }
+
+    .courses-all {
+        width: 100%;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .courses h1 {
+        width: 100%;
+    }
+
+    .courses p {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .courses .courses-card {
+        width: 80%;
+        margin: auto;
+    }
+
+
+    .city-all {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+
+    .city-up h1 {
+        font-size: 28px;
+    }
+
+    .city-up p {
+        text-align: center;
+    }
+
+    .city-down {
+        display: flex;
+        flex-direction: column;
+        grid-area: 130px;
+        height: 100%;
+    }
+
+    .city-down-card {
+        width: 100%;
+        gap: 30px;
+    }
+
+    .city-down .city-down-card img {
+        width: 90%;
+        height: 230px;
+        object-fit: cover;
+
+    }
+
+
+
+
+    .library-all {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .library-card {
+        width: 100%;
+    }
+
+    .comment-all {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .comment-down .comment-down-card {
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+        gap: 10px;
+        padding: 20px;
+
+    }
+
+    .comment-down .comment-down-card img {
+        width: 42px;
+        height: 42px;
+        
+        border-radius: 50%;
+    }
+
+    .comment-down .comment-down-card-content {
+        width: 100%;
+        padding: 0;
+    }
+    .urgent-call {
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+    }
+    .urgent-call h1 {
+        top:50%;
+        left:10%;
+        font-size: 18px;
+    }
+    .urgent-call a  {
+        top: 58%;
+        left: 28%;
+    }
+}
